@@ -6,38 +6,10 @@ Many side projects are currently on-going in separate repositories and they will
 
 While each jupyter notebook is self-explanatory, required modules can be found in the "requirement.txt" contained in each project folder. If you wish to install the requirements, simply run `pip install -r requirements.txt` in your virtual environment. 
 
-Any questions or feedback regarding this portfolio can be kindly directed to the author, ***Sean Choi***, at ***ss.sean.choi@gmail.com*** or ***ss.choi@mail.utoronto.ca***.
-
-## Articles and tutorials
-
-If interested, please also take a look at ***my articles on various Artificial Intelligence, Deep Learning, Machine Learning and Data Science research topics*** [***HERE***](https://github.com/sungsujaing/Artificial_Intelligence_articles_and_tutorials).
-
-*Article/tutorial topics include*:
-
-* Distributed training with Keras and TensorFlow data module
-* Exploring GAN, WGAN and StyleGAN
-* Face recognition using OpenFace
-* Comparison studies (pros/cons) on various supervised machine learning models
-* and many more!!
-
-## Current list of projects
-* [**Two-style Neural Transfer**](#two-style-neural-transfer-or-full-repository)
-* [**KnowYourMove - store traffic analyzer**](#knowyourmove-or-full-repository)
-* [**Handwritten Letters/Digits generator (LDG_v3)**](#handwritten-letters-and-digits-generator-ldg_v3-or-full-repository)
-* [**TV time tracker based on face recognition (TTT_v3)**](#tv-time-tracker-based-on-face-recognition-ttt_v3-or-full-repository)
-* [**Online-image-based Happy Dog Classifier (HDC_v2)**](#online-image-based-happy-dog-classifier-hdc_v2-or-full-repository)
-* [**Morphology-based skin cancer classification**](#morphology-based-skin-cancer-classification)
-* [**Forest Fire area prediction**](#forest-fire-area-prediction)
-* [**Motion-sensor-based human motion prediction and subject identification**](#motion-sensor-based-human-motion-prediction-and-subject-identification)
-* [**Malignant breast tumor detection**](#malignant-breast-tumor-detection)
-* [**Retail sales prediction**](#retail-sales-prediction)
-* [**Data analysis and visualization**](#data-analysis-and-visualization)
-* [**Mini capstone project for fast prototyping**](#mini-capstone-project-for-fast-prototyping)
-
 ## Project summaries
 #### [*tools: TensorFlow-gpu, Keras, OpenCV, Scikit-Learn, Flask, Pandas, Matplotlib, Seaborn, etc.*]
 
-### [Two-style Neural Transfer][31] (or [*Full repository*](https://github.com/sungsujaing/NeuralStyleTransfer_custom))
+### [Two-style Neural Transfer][31]
 
 Developed a custom **two-style neural style transfer** that combines styles of two different arts to redraw the third art piece in a unique way. A pre-trained VGG16 model was used to extract styles and contents from arbitrary images. Unlike the conventional one-style transfer approach, different low-level features were optimized for different styles of arts, thus allowing both styles to be reflected when reconstructing the content image. Many hyperparameters are involved in this fitting process. Thus, based on specific purposes, hyperparameters can be adjusted to create unique results. For demo purposes, art images were obtained from Google. 
 
@@ -55,7 +27,7 @@ Developed a custom **two-style neural style transfer** that combines styles of t
 
 
 
-### [KnowYourMove][30] (or [*Full repository*](https://github.com/sungsujaing/INSIGHT-project))
+### [KnowYourMove][30]
 
 Deployed computer-vision-based business intelligence tool (**KnowYourMove**) that analyzes time-specific store traffics from store surveillance camera systems. By tracking the motion of individual customers over time (**based on Single Shot Detector and centroid tracking algorithm**), KnowYourMove generates information maps that can provide business owners with hidden insights to understand their customers better (in terms of their shopping routes and aggregated time spent in different areas). KnowYourMove has been deployed as a [**web application**](http://www.knowyourmove.store/) (currently hosted on AWS t2.micro; **NOTE: as of Nov 7, 2019, the instance has been temporarily stopped.**) where a user can upload a surveillance video (or use videos from YouTube) to generate the reports. The information can be filtered by specific time windows (i.e. morning/afternoon or weekdays/weekends, etc). Such information is expected to provide time-specific customer traffics at a store so as to enable micro-optimization of business operations such as store floor plannings and pricing strategy without breaching customer privacy.
 
@@ -67,7 +39,7 @@ Deployed computer-vision-based business intelligence tool (**KnowYourMove**) tha
 
 
 
-### [Handwritten Letters and Digits generator (LDG_v3)][29] (or [*Full repository*](https://github.com/sungsujaing/letter_digit_generator_VAE))
+### [Handwritten Letters and Digits generator (LDG_v3)][29]
 
 Developed **(convolutional) conditional variational autoencoder (CVAE)**-based handwritten letters/digits generator. Trained on the EMNIST dataset (62 claases compriding [0-9], [a-z] and [A-Z]), the generator can produce new handwritten-like letters/digits based on the typed inputs. Both convolutional and vanilla models are being investigated for comparison purposes. While the models are not yet optimized, their reconstruction results look satisfactory.
 
@@ -78,13 +50,13 @@ Developed **(convolutional) conditional variational autoencoder (CVAE)**-based h
 <img src="Letter_digit_generator/images/summary_ldg_v3_testing.png" width="100%">
 </p>
 
-***[ldg_v3_gen](https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Letter_digit_generator/ldg_v3_gen.py)*** is a command-line letters/digits generator based on ldg_v3 Conv-CVAE model. It simply loads the Conv-CVAE model and the corresponding weights (best) to produce the results.
+***[ldg_v3_gen]*** is a command-line letters/digits generator based on ldg_v3 Conv-CVAE model. It simply loads the Conv-CVAE model and the corresponding weights (best) to produce the results.
 
 <p align="center">
 <img src="Letter_digit_generator/images/summary_ldg_v3_gen.png" width="100%">
 </p>
 
-### [TV time tracker based on face recognition (TTT_v3)][28] (or [*Full repository*](https://github.com/sungsujaing/TV_time_tracking_face_recognition))
+### [TV time tracker based on face recognition (TTT_v3)][28]
 
 Built a tracker that recognizes the faces of registered individuals to measure the time they spend watching the camera (or watching TV in the final application). Developed on top of [Keras-OpenFace](https://github.com/iwantooxxoox/Keras-OpenFace), a project converting OpenFace from its original Torch implementation to a Keras version, the current version of TTT (TTT_v3) showed great accuracy of ~ 88% in recognizing my face + measuring time me watching a camera in a video format. In the upcoming versions, TTT will be implemented into a real-time module to be mounted on a TV to finalize the project.
 
@@ -98,7 +70,7 @@ Built a tracker that recognizes the faces of registered individuals to measure t
 <img src="TV_time_tracker/Readme_images/TTT_v3_sean_test_result.png" width="100%">
 </p>
 
-### [Online-image-based Happy Dog Classifier (HDC_v2)][27] (or [*Full repository*](https://github.com/sungsujaing/Happy_Dog_Detection))
+### [Online-image-based Happy Dog Classifier (HDC_v2)][27]
 
 Built **a customized CNN model with ResNET50-like residual blocks**. Trained it with a small image set that was prepared from Google using google-images-download module. After searching for the optimized hyperparameters, the final model could achieve ~ 90% accuracy on a test set and the model was eventually applied to predict the happiness of my puppy, Lucky. Many of the mislabeled images were turned out to be very difficult even for me to classify as happy or sad. Acknowledging the difficulties associated with reading dogs' emotions, I have to admit that the quality of the downloaded training data must have been compromised to some degree. Nonetheless, the best model/weights have been saved.
 
@@ -110,7 +82,7 @@ Built **a customized CNN model with ResNET50-like residual blocks**. Trained it 
 #### Happy Dog Detector (HDD)
 In the ongoing **HappyDogDetector (HDD)** development, ***a customized YOLO model was integrated to the best model built in HDC_v2*** in order to localize happy dogs in given images/videos. For this first version (HDD_v1), the pretrained YOLO weights were used to identify dogs among 80 predictions, but in the upcoming versions, newly-trained weights will be used to localize only the face of a dog to improve the accuracy of the final model. 
 
-[***Current HDD_v1***](https://github.com/sungsujaing/Happy_Dog_Detection/blob/master/custom_darkflow/HappyDogDetector_v1.ipynb) on a YouTube video (detecting only **Happy**)
+[***Current HDD_v1***] on a YouTube video (detecting only **Happy**)
 *Video source: [here](https://www.youtube.com/watch?v=0lEUiQEDUHM)*
 
 <p align="center">
@@ -192,31 +164,4 @@ A ***KNN*** model was trained in order to classify the anonymous dataset. Variou
 <img src="Mini capstone projects/images/search_figure_summary.png" alt="intermediate_layer_1" width="100%" class="center">
 <img src="Mini capstone projects/images/random_tpe_search_summary.png" alt="confusion matrix" width="45%" class="center">
 </p>
-
-
-
-#### [Loan payback prediction][26]
-Constructed and compared basic ***tree-based models*** for their performance on a prediction of loan payback based on LendingClub profiles. 
-
-[1]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/SkinCancerClassification_CNN/SkinCancerClassification.ipynb
-[2]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/EstimatingDamageFromForestFire/Forest_Fire_Prediction_Model.ipynb
-[3]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/HumanAndMotionPrediction/Mobile_Human_Motion_Prediction.ipynb
-[4]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/PrognosticBreaseTumorDetection/BenignBreatTumorDetection.ipynb
-[5]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/RetailSalesPrediction_BlackFridayAnalysis/BlackFriday%2BAnalysis_Prediction.ipynb
-
-[11]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/EDA-911call_Montgomery.ipynb
-[12]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/EDA-FANG_StockPrice.ipynb
-
-[21]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/Bank%20authentication%20prediction_DNN%20buildup%20on%20TensorFlow.ipynb
-[22]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/Yelp_Review%20classification_NLP.ipynb
-[23]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/College%20type%20prediction_K-Means%20and%20Agglomerative%20Clustering.ipynb
-[24]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/Ad%20click%20prediction_Logistic%20Regression.ipynb
-[25]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/AnonymousDataClassification_KNN.ipynb
-[26]:https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Mini%20capstone%20projects/Loan_payback_prediction_Decision%20Trees%20and%20Random%20Forest.ipynb
-[27]: https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/HappyDogDetection/HappyDogClassifier_v2.ipynb
-[28]: https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/TV_time_tracker/TV_time_tracking_face_recognition_v3.ipynb
-[29]: https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/Letter_digit_generator/letter_digit_generator_v3_conv-CVAE.ipynb
-
-[30]: https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/KnowYourMove/Motion_analyzer.ipynb
-[31]: https://github.com/sungsujaing/Artificial_Intelligence_Data_Science_Portfolio/blob/master/TwoStyleTransfer/StyleTransfer_custom.ipynb
 
